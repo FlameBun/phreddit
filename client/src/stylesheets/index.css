@@ -1,0 +1,854 @@
+/* reddit sans */
+@import url('https://fonts.googleapis.com/css2?family=Reddit+Sans:ital,wght@0,200..900;1,200..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css");
+
+:root {
+    /* colors */
+    --redditOrange: #FF5700;
+    --bannerInput: #b1bbc451;
+
+    --bannerBorder: 1px;
+    --bannerHeight: 40px;
+    --bannerPadding: 8px;
+
+    --navbarBorder: 1px;
+    --navbarWidth: 220px;
+    --navbarPadding: 16px;
+
+    --mainPadding: 20px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    color: var(--redditOrange);
+    font-family: 'Reddit Sans';
+    font-weight: 800;
+    text-decoration: none;
+}
+
+body, button {
+    font-family:  "Montserrat", sans-serif, verdana, Arial, Helvetica;
+}
+
+/* welcome page start */
+#welcome-page {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#welcome-page h1 {
+    font-size: 30px;
+}
+
+#welcome-page input {
+    cursor: pointer;
+    padding: 10px;
+    margin-top: 15px;
+    width: 220px;
+    background-color: var(--redditOrange);
+    border: none;
+    border-radius: 20px;
+    color: white;
+    font-size: 14px;
+}
+
+#welcome-page #guest {
+    background-color: var(--bannerInput);
+    color: black;
+}
+/* welcome page end */
+
+/* login page start */
+#login-page {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#login-page h1 {
+    font-size: 30px;
+}
+
+#login-page h2 {
+    font-size: 18px;
+    color: black;
+    margin-top: 10px;
+    font-weight: 400;
+}
+
+#login-page input {
+    border: none;
+    border-radius: 20px;
+    margin-top: 15px;
+    outline: none;
+}
+
+#login-page .text-input {
+    background-color: var(--bannerInput);
+    width: 230px;
+    padding: 15px;
+}
+
+#login-page .buttons {
+    background-color: var(--bannerInput);
+    color: black;
+    cursor: pointer;
+    width: 90px;
+    padding: 10px;
+}
+
+#login-page .buttons:hover {
+    background-color: var(--redditOrange);
+    color: white;
+}
+
+#login-page #login-buttons {
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+}
+/* login page end */
+
+/* register page start */
+#register-page {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#register-page h1 {
+    font-size: 30px;
+}
+
+#register-page h2 {
+    font-size: 18px;
+    color: black;
+    margin-top: 10px;
+    font-weight: 400;
+}
+
+#register-page input {
+    border: none;
+    border-radius: 20px;
+    margin-top: 15px;
+    outline: none;
+}
+
+#register-page .text-input {
+    width: 230px;
+    background-color: var(--bannerInput);
+    padding: 15px;
+}
+
+#register-page .input-error {
+    display: flex;
+
+    margin: 5px 0 0 10px;
+    width: 250px;
+}
+
+#register-page i {
+    margin: 1px 3px 0 0;
+}
+
+#register-page .buttons {
+    background-color: var(--bannerInput);
+    cursor: pointer;
+    color: black;
+    padding: 10px;
+    width: 90px;
+}
+
+#register-page .buttons:hover {
+    background-color: var(--redditOrange);
+    color: white;
+}
+
+#register-page #register-buttons {
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/* register page end */
+
+/* banner start */
+#banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    position: fixed;
+
+    background-color: white;
+    border-bottom: var(--bannerBorder) solid black;
+    padding: var(--bannerPadding);
+    width: calc(100% - var(--bannerPadding) * 2);
+}
+
+#banner h1 {
+    cursor: pointer;
+    font-size: 24px;
+}
+
+#search {
+    width: 525px;
+    height: var(--bannerHeight);
+
+    background-color: var(--bannerInput);
+    border-radius: 20px;
+    border: none;
+    font: inherit;
+    font-size: 12px;
+    outline: none;
+    padding: 0 16px;
+}
+
+#navbar-right-side {
+    display: flex;
+    column-gap: 10px;
+}
+
+#create-post, #create-post-grayed-out, #guest-profile, #user-profile, #logout-button {
+    border: none;
+    border-radius: 20px;
+    font: inherit;
+    font-size: 14px;
+    height: var(--bannerHeight);
+    padding: 0 16px;
+}
+
+#create-post, #user-profile, #logout-button {
+    cursor: pointer;
+}
+
+#create-post:hover, #user-profile:hover {
+    background-color: var(--redditOrange);
+}
+
+#guest-profile:hover, #logout-button:hover {
+    background-color: lightgray;
+}
+
+#create-post-grayed-out {
+    color: gray;
+    opacity: 70%;
+}
+/* banner end */
+
+/* navbar start */
+#navbar {
+    overflow: auto;
+
+    position: fixed;
+    top: calc(var(--bannerHeight) + var(--bannerPadding) * 2 + var(--bannerBorder));
+
+    width: var(--navbarWidth);
+    height: calc(100% - var(--bannerHeight) - var(--bannerPadding) * 2 - var(--bannerBorder) - var(--navbarPadding) * 2);
+
+    background-color: white;
+    border-right: var(--navbarBorder) solid black;
+    padding: var(--navbarPadding);
+}
+
+#home-button, #create-community, #create-community-grayed-out, .community {
+    display: block;
+
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 12px;
+    padding: 8px 16px;
+}
+
+#create-community, #create-community-grayed-out, .community {
+    margin: 5px 0;
+}
+
+#create-community-grayed-out {
+    color: gray;
+    cursor: default;
+    opacity: 70%;
+}
+
+#home-button:link, #home-button:visited, #create-community:link, #create-community:visited, .community {
+    color: black;
+    text-decoration: none;
+}
+
+#home-button:hover, #create-community:hover {
+    background-color: var(--redditOrange);
+}
+
+.reddit-orange {
+    background-color: var(--redditOrange);
+}
+
+.lightgray {
+    background-color: lightgray;
+}
+
+.lightergray {
+    background-color: var(--bannerInput);
+}
+
+#navbar hr {
+    border: none;
+    border-top: 1px solid black;
+    margin: 12px 0;
+}
+
+#community-section h2 {
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+}
+
+.community {
+    display: block;
+}
+
+.community:hover {
+    background-color: var(--bannerInput);
+}
+/* navbar end */
+
+.main {
+    overflow: auto;
+
+    position: fixed;
+    top: calc(var(--bannerHeight) + var(--bannerPadding) * 2 + var(--bannerBorder));
+    left: calc(var(--navbarWidth) + var(--navbarPadding) * 2 + var(--navbarBorder));
+
+    width: calc(100% - var(--navbarWidth) - var(--navbarPadding) * 2 - var(--navbarBorder) - var(--mainPadding) * 2);
+    height: calc(100% - var(--bannerHeight) - var(--bannerPadding) * 2 - var(--bannerBorder) - var(--mainPadding) * 2);
+
+    background-color: white;
+    padding: var(--mainPadding);
+}
+
+/* home page start */
+#home-page-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    font-size: 16px;
+}
+
+#home-page-header #all-posts {
+    font-size: 18px;
+    font-weight: 450;
+}
+
+#post-info {
+    font-size: 14px;
+}
+
+#post-info > * {
+    margin-bottom: 3px;
+}
+
+#community-name-time, #community-info {
+    display: flex;
+    gap: 5px;
+}
+
+#join-leave-button {
+    display: block;
+
+    background-color: var(--bannerInput);
+    border-width: 0;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 12px;
+    margin-top: 8px;
+    padding: 4px 16px;
+}
+
+#home-page-header > :first-child {
+    flex-grow: 1;
+}
+
+#home-page-header > :nth-child(n + 2) {
+    background-color: transparent;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font: inherit;
+    font-size: 14px;
+    padding: 8px 12px;
+}
+
+#home-page-header > .clear:hover {
+    background-color: #b1bbc434;
+}
+
+#home-page-header > .lightergray {
+    background-color: var(--bannerInput);
+}
+
+#home-page > hr:first-of-type {
+    border: none;
+    border-top: 1px solid black;
+    margin: 8px 0 4px 0;
+}
+
+#post-section hr {
+    border: none;
+    border-top: 1px dotted black;
+    margin: 4px 0;
+}
+
+#post-section > hr:last-of-type {
+    border: none;
+    border-top: 1px solid black;
+}
+
+#post-section .sub-list-demarcation {
+    display: flex;
+    align-items: center;
+    margin: 5px 0px;
+}
+
+.sub-list-demarcation::before, .sub-list-demarcation::after {
+    flex: 1;
+
+    border-top: 1px solid black;
+    content: "";
+}
+
+.sub-list-demarcation span {
+    font-size: 14px;
+    letter-spacing: 1px;
+    margin: 0 10px 0 10px;
+}
+
+.post {
+    border-radius: 16px;
+    padding: 8px 12px;
+}
+
+.post:hover {
+    background-color: rgba(211, 211, 211, 0.3);
+    cursor: pointer;
+}
+
+.post > * {
+    margin: 4px 0;
+}
+
+.post > :first-child {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    font-size: 11px;
+}
+
+.post > :nth-child(2) {
+    font-size: 21px;
+    font-weight: 450;
+}
+
+.post > :nth-child(3) {
+    font-size: 14px;
+}
+
+.post > :nth-child(4) {
+    font-size: 16px;
+}
+
+.post > :nth-child(5) {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    font-size: 11px;
+}
+/* home page end */
+
+select, option, input {
+    font-family: "Montserrat", sans-serif, verdana, Arial, Helvetica;
+}
+
+/* new community start */
+#new-community * {
+    border: none;
+}
+
+.label {
+    margin-bottom: 5px; 
+}
+.label span {
+    color: red;
+}
+
+#new-community .input-container {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.input {
+    border: none;
+    background-color: var(--bannerInput);
+    width: calc(100% - 30px);
+    height: 30px;
+    outline: none;
+    border-radius: 15px;
+    padding: 10px 15px;
+}
+
+textarea {
+    resize: none;
+}
+
+#new-community #community-desc {
+    font-family: "Montserrat", sans-serif, verdana, Arial, Helvetica;
+    height: 100px;
+    padding: 15px 15px;
+}
+
+#new-community #engender-community {
+    font-family: "Montserrat", sans-serif, verdana, Arial, Helvetica;
+    background-color: var(--bannerInput);
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 15px;
+}
+
+#new-community #engender-community:hover {
+    background-color: var(--redditOrange);
+}
+
+.input-error {
+    color: #cc0202;
+    font-size: 12px;
+    margin: 5px 0px 15px 5px;
+}
+/* new community end */
+
+/* new post start */
+#new-post * {
+    border: none;
+    outline: none;
+}
+
+#new-post select {
+    display: block;
+}
+
+#new-post #select-community, #new-post #submit-post, #new-post #select-link-flair, #new-comment #submit-comment {
+    background-color: var(--bannerInput);    
+    border: none;
+    border-radius: 20px;   
+    padding: 10px 15px;
+}
+
+#new-post .input-container {
+    margin: 10px 0px;
+}
+
+#new-post #select-link-flair {
+    margin: 10px 0px;
+}
+
+#new-post #post-content, #new-comment #comment-content {
+    font-family: "Montserrat", sans-serif, verdana, Arial, Helvetica;
+    height: 150px;
+    padding: 15px 15px;
+}
+
+#new-post #submit-post:hover, #new-comment #submit-comment:hover {
+    background-color: var(--redditOrange);
+}
+
+#submit-post, #submit-comment {
+    cursor: pointer;
+}
+
+#submit-post {
+    font: inherit;
+    font-size: 14px;
+}
+/* new post end */
+
+/* post page view start */
+#post-page-header > * {
+    margin-bottom: 5px;
+}
+
+#post-page-header > :first-child {
+    display: flex;
+    gap: 8px;
+    font-size: 12px;
+}
+
+#post-page-header > :nth-child(3) {
+    font-weight: 450;
+}
+
+#post-page-header > :nth-child(4) {
+    font-size: 12px;
+}
+
+#post-page-header > :nth-child(6) {
+    display: flex;
+    gap: 8px;
+    font-size: 14px;
+    padding: 5px 0px;
+}
+
+#post-page-header button, #post-page-header .vote-button-grayed-out {
+    background-color: var(--bannerInput);
+    border: none;
+    border-radius: 5px;
+    padding: 0px 7px;
+    margin-right: 5px;
+    
+}
+
+.vote-button-grayed-out{
+    color: gray;
+    cursor: default;
+    opacity: 70%;
+}
+
+#post-page-header .highlight, .comment .highlight {
+    background-color: var(--redditOrange);
+    color: white;
+}
+
+#post-page-header #add-comment-button, #post-page-header #add-comment-button-grayed-out {
+    font-family: "Montserrat", sans-serif, verdana, Arial, Helvetica;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 6px 0px 10px 0px;
+    background-color: var(--bannerInput);
+    padding: 5px 10px;
+}
+
+#post-page-header #add-comment-button-grayed-out {
+    color: gray;
+    cursor: default;
+    opacity: 70%;
+}
+
+.comment-thread > .comment-thread {
+    margin-left: 24px;
+}
+
+.comment {
+    border: solid black;
+    border-width: 0 0 0 1.5px;
+    margin: 12px 0px;
+    padding-left: 8px;
+}
+
+.comment-header {
+    display: flex;
+    gap: 8px;
+    font-size: 12px;
+}
+
+.comment-content {
+    margin: 5px 0px;
+}
+
+.comment span {
+    margin-right: 7px;
+    font-size: 13.5px;
+}
+
+.comment button, .comment .vote-button-grayed-out {
+    background-color: var(--bannerInput);
+    border: none;
+    border-radius: 10px;
+    padding: 3px 7px;
+    margin-right: 5px;
+}
+
+.reply-button, .reply-button-grayed-out {
+    font-family: "Montserrat", sans-serif, verdana, Arial, Helvetica;
+    background-color: var(--bannerInput);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 5px 10px;
+}
+
+.reply-button-grayed-out {
+    color: gray;
+    cursor: default;
+    opacity: 70%;
+}
+/* post page view end */
+
+/* user profile page view start */
+#user-profile-page-header > * {
+    margin: 3px 0;
+}
+
+#user-profile-page-header > :first-child {
+    display: flex;
+    align-items: center;
+
+    font-size: 32px;
+}
+
+#user-profile-display-name {
+    flex-grow: 1;
+}
+
+#return-admin-profile {
+    background-color: var(--bannerInput);
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font: inherit;
+    font-size: 14px;
+    padding: 10px 16px;
+}
+
+#user-profile-page-header > :nth-child(n + 2) {
+    font-size: 14px;
+}
+
+#user-profile-page hr {
+    border: none;
+    border-top: 1px solid black;
+    margin: 12px 0 8px 0;
+}
+
+#user-profile-listing-buttons {
+    display: flex;
+    gap: 5px;
+
+    margin: 8px 0;
+}
+
+#user-profile-listing-buttons > * {
+    background-color: transparent;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font: inherit;
+    font-size: 14px;
+    padding: 8px 12px;
+}
+
+#user-profile-listing-buttons > .lightergray {
+    background-color: var(--bannerInput);
+}   
+
+#user-profile-listing-buttons > .clear:hover {
+    background-color: #b1bbc434;
+}
+
+.community-listing-block, .post-listing-block, .comment-listing-block,
+.user-listing-block {
+    margin: 18px 0;
+}
+
+.community-listing-element, .post-listing-element, .comment-listing-element,
+.user-listing-element {
+    margin-bottom: 3px;
+    text-decoration: underline;
+    width: fit-content;
+}
+
+.community-listing-element:hover, .post-listing-element:hover,
+.comment-listing-element:hover, .user-listing-element:hover {
+    color: var(--redditOrange);
+    cursor: pointer;
+}
+
+.comment-listing-element > :first-child {
+    font-size: 12px;
+}
+
+.comment-listing-element > * {
+    width: fit-content;
+}
+
+.user-listing-element > :first-child {
+    font-size: 18px;
+}
+
+.user-listing-element > :nth-child(n + 2) {
+    font-size: 14px;
+}
+
+.listing-delete {
+    font-family: "Montserrat", sans-serif, verdana, Arial, Helvetica;
+    font-size: 12px;
+    background-color: var(--bannerInput);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 2px 10px;
+}
+
+#profile-listing-empty {
+    font-size: 24px;
+    margin-top: 100px;
+    text-align: center;
+}
+/* user profile page view end */
+
+
+/* error pop up start */
+#error-popup {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    backdrop-filter: blur(2px);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+#error-container {
+    border-radius: 20px;
+    background-color: white;
+    text-align: center;
+    padding: 100px 150px;
+}
+
+#error-container h2 {
+    color: var(--redditOrange);
+}
+
+#error-popup-desc {
+    margin: 4px 0 18px 0;
+}
+
+#error-container input {
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    padding: 5px 10px;
+    background-color: var(--bannerInput);
+}
+
+#cancel-confirmation {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+/* error pop up end */
