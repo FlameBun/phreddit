@@ -154,7 +154,7 @@ export default function PostPage({ postID, data, setData, setMainContent }) {
               <button
                 className={
                   post.upvoters.includes(user.displayName)
-                    ? "highlight"
+                    ? "upvote-highlight"
                     : undefined
                 }
                 onClick={() => handlePostUpvote(post.postID)}
@@ -164,7 +164,7 @@ export default function PostPage({ postID, data, setData, setMainContent }) {
               <button
                 className={
                   post.downvoters.includes(user.displayName)
-                    ? "highlight"
+                    ? "downvote-highlight"
                     : undefined
                 }
                 onClick={() => handlePostDownvote(post.postID)}
@@ -253,7 +253,7 @@ export default function PostPage({ postID, data, setData, setMainContent }) {
                   <button
                     className={
                       commentReply.upvoters.includes(user.displayName)
-                        ? "highlight"
+                        ? "upvote-highlight"
                         : undefined
                     }
                     onClick={() => handleCommentUpvote(commentReply.commentID)}
@@ -263,7 +263,7 @@ export default function PostPage({ postID, data, setData, setMainContent }) {
                   <button
                     className={
                       commentReply.downvoters.includes(user.displayName)
-                        ? "highlight"
+                        ? "downvote-highlight"
                         : undefined
                     }
                     onClick={() =>

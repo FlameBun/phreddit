@@ -189,6 +189,7 @@ body, button {
 #banner {
     display: flex;
     align-items: center;
+    gap: 10px;
     justify-content: space-between;
 
     position: fixed;
@@ -618,17 +619,21 @@ textarea {
     border-radius: 5px;
     padding: 0px 7px;
     margin-right: 5px;
-    
 }
 
-.vote-button-grayed-out{
+.vote-button-grayed-out {
     color: gray;
     cursor: default;
     opacity: 70%;
 }
 
-#post-page-header .highlight, .comment .highlight {
+#post-page-header .upvote-highlight, .comment .upvote-highlight {
     background-color: var(--redditOrange);
+    color: white;
+}
+
+#post-page-header .downvote-highlight, .comment .downvote-highlight {
+    background-color: #7193ff;
     color: white;
 }
 
