@@ -239,7 +239,7 @@ export default function AdminProfilePage({
             onClick={() => handleCommentLink(comment.commentID)}
           >
             <div>{post.title}</div>
-            <div>{comment.content.slice(0, 20)}</div>
+            <div>{comment.content.slice(0, 80).trim() + ((comment.content.trim().length > 80) ? ". . ." : "")}</div>
           </div>
           <button
             className="listing-delete"
