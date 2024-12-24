@@ -295,18 +295,31 @@ async function initializeDB() {
     upvoters: ["Cat13"],
     downvoters: [],
   };
+  const post6 = {
+    // Post 6
+    title: "AITJ: I poured in the milk before the cereal for my son's breakfast",
+    content: "I was making my young son of five years old some cereal for breakfast, but all of a sudden, he started crying. I asked him what was wrong, and he told me he was upset because I poured in milk into his bowl before I poured in the cereal. I told my son that he was wrong because as far as I know, milk always comes first. After that, my son wouldn't talk to me for the rest of the day. Am I the jerk here?",
+    linkFlairID: null,
+    postedBy: "OutTheTruth47",
+    postedDate: new Date("December 21, 2024 00:57:00"),
+    commentIDs: [],
+    views: 6,
+    upvoters: [],
+    downvoters: ["Cat13", "MarcoArelius", "Astyanax"],
+  };
   let postRef1 = await createPost(post1);
   let postRef2 = await createPost(post2);
   let postRef3 = await createPost(post3);
   let postRef4 = await createPost(post4);
   let postRef5 = await createPost(post5);
+  let postRef6 = await createPost(post6);
 
   // Community objects
   const community1 = {
     // Community object 1
     name: "Am I the Jerk?",
     description: "A practical application of the principles of justice.",
-    postIDs: [postRef1],
+    postIDs: [postRef1, postRef6],
     startDate: new Date("August 10, 2014 04:18:00"),
     members: ["Rollo", "Shemp", "Cat13", "Astyanax", "RankOneTrucker"],
     creator: "Astyanax",
