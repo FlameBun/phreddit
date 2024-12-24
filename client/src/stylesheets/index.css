@@ -680,7 +680,6 @@ textarea {
 }
 
 .comment button, .comment .vote-button-grayed-out {
-    background-color: var(--bannerInput);
     border: none;
     border-radius: 10px;
     padding: 3px 7px;

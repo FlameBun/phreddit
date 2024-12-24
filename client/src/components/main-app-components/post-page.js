@@ -145,8 +145,8 @@ export default function PostPage({ postID, data, setData, setMainContent }) {
           )}
           {user !== null && user.reputation < 50 && (
             <div>
-              <button className="vote-button-grayed-out">&#8679;</button>
-              <button className="vote-button-grayed-out">&#8681;</button>
+              <button className={"vote-button-grayed-out" + (post.upvoters.includes(user.displayName) ? " upvote-highlight" : "")}>&#8679;</button>
+              <button className={"vote-button-grayed-out" + (post.downvoters.includes(user.displayName) ? " downvote-highlight" : "")}>&#8681;</button>
             </div>
           )}
           {user !== null && user.reputation >= 50 && (
@@ -243,8 +243,8 @@ export default function PostPage({ postID, data, setData, setMainContent }) {
 
               {user !== null && user.reputation < 50 && (
                 <>
-                  <button className="vote-button-grayed-out">&#8679;</button>
-                  <button className="vote-button-grayed-out">&#8681;</button>
+                  <button className={"vote-button-grayed-out" + (commentReply.upvoters.includes(user.displayName) ? " upvote-highlight" : "")}>&#8679;</button>
+                  <button className={"vote-button-grayed-out" + (commentReply.downvoters.includes(user.displayName) ? " downvote-highlight" : "")}>&#8681;</button>
                 </>
               )}
 
