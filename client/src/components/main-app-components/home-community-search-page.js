@@ -286,7 +286,7 @@ export default function HomeCommunitySearchPage({
             </div>
             <div>{post.title}</div>
             <div>{linkFlair}</div>
-            <div>{post.content.slice(0, 80)}</div>
+            <div>{post.content.slice(0, 200).trim() + ((post.content.trim().length > 200) ? ". . ." : "")}</div>
             <div>
               <div>{post.views} Views</div>
               <div>{getCommentCount(post, comments)} Comments</div>
@@ -324,7 +324,7 @@ export default function HomeCommunitySearchPage({
             </div>
             <div>{post.title}</div>
             <div>{linkFlair}</div>
-            <div>{post.content.slice(0, 80)}</div>
+            <div>{post.content.slice(0, 200).trim() + ((post.content.trim().length > 200) ? ". . ." : "")}</div>
             <div>
               <div>{post.views} Views</div>
               <div>{getCommentCount(post, comments)} Comments</div>
@@ -355,7 +355,7 @@ export default function HomeCommunitySearchPage({
             </div>
             <div>{post.title}</div>
             <div>{linkFlair}</div>
-            <div>{post.content.slice(0, 80)}</div>
+            <div>{post.content.slice(0, 200).trim() + ((post.content.trim().length > 200) ? ". . ." : "")}</div>
             <div>
               <div>{post.views} Views</div>
               <div>{getCommentCount(post, comments)} Comments</div>
