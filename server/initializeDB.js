@@ -88,14 +88,69 @@ async function initializeDB() {
   };
   const linkFlair4 = {
     // Link flair 4
-    content: "Worse than Ludwig"
+    content: "Egotist"
   };
   let linkFlairRef1 = await createLinkFlair(linkFlair1);
-  await createLinkFlair(linkFlair2);
+  let linkFlairRef2 = await createLinkFlair(linkFlair2);
   let linkFlairRef3 = await createLinkFlair(linkFlair3);
   let linkFlairRef4 = await createLinkFlair(linkFlair4);
 
   // Comment objects
+  const comment12 = {
+    // Comment 12
+    content: "Interested. Check your email.",
+    commentIDs: [],
+    commentedBy: "Cat13",
+    commentedDate: new Date("December 17, 2024 23:36:22"),
+    upvoters: [],
+    downvoters: [],
+  }
+  let commentRef12 = await createComment(comment12);
+
+  const comment11 = {
+    // Comment 11
+    content: "Let's do this! Red Bull and Monster Energy every day, baby.",
+    commentIDs: [],
+    commentedBy: "BigFeet",
+    commentedDate: new Date("December 13, 2024 01:30:00"),
+    upvoters: [],
+    downvoters: [],
+  }
+  let commentRef11 = await createComment(comment11);
+
+  const comment10 = {
+    // Comment 10
+    content: "How can you enjoy seeing colored manga panels? Anime is supposed to portray motion, and this adaptation shows none of that.",
+    commentIDs: [],
+    commentedBy: "RankOneTrucker",
+    commentedDate: new Date("October 25, 2024 08:30:00"),
+    upvoters: ["Astyanax", "RankOneTrucker"],
+    downvoters: [],
+  }
+  let commentRef10 = await createComment(comment10);
+
+  const comment9 = {
+    // Comment 9
+    content: "You must be delusional and blind then.",
+    commentIDs: [],
+    commentedBy: "Astyanax",
+    commentedDate: new Date("October 25, 2024 07:20:20"),
+    upvoters: ["Astyanax", "RankOneTrucker"],
+    downvoters: [],
+  }
+  let commentRef9 = await createComment(comment9);
+
+  const comment8 = {
+    // Comment 8
+    content: "I think you're a hater. It looks fine to me and I enjoy it.",
+    commentIDs: [commentRef9, commentRef10],
+    commentedBy: "Cat13",
+    commentedDate: new Date("October 25, 2024 05:00:00"),
+    upvoters: ["Rollo", "Shemp", "Cat13"],
+    downvoters: ["Astyanax", "RankOneTrucker"],
+  };
+  let commentRef8 = await createComment(comment8);
+
   const comment7 = {
     // Comment 7
     content: "I want to believe too! Let's do this!!!",
@@ -211,14 +266,40 @@ async function initializeDB() {
     linkFlairID: linkFlairRef4,
     postedBy: "BigFeet",
     postedDate: new Date("October 24, 2024 13:57:00"),
-    commentIDs: [],
+    commentIDs: [commentRef8],
     views: 420,
     upvoters: [],
+    downvoters: [],
+  };
+  const post4 = {
+    // Post 4
+    title: "Good luck on finals week everyone!",
+    content: "Finals week is here at least. I am going to lose at least 2 years of my life span from all the all-nighters I'm going to pull when studying for my CS exams this week. Please SEND HELP.",
+    linkFlairID: linkFlairRef2,
+    postedBy: "Rollo",
+    postedDate: new Date("December 12, 2024 10:13:00"),
+    commentIDs: [commentRef11],
+    views: 110,
+    upvoters: ["Rollo", "Shemp"],
+    downvoters: [],
+  };
+  const post5 = {
+    // Post 5
+    title: "Selling ASUS monitor before leaving",
+    content: "I am graduating and am moving back to Korea. I'm selling my ASUS monitor for $200. It is 1440p, 144hz, and is an IPS panel with 1ms response time. Email me at blingbling11@gmail.com if you're interested.",
+    linkFlairID: null,
+    postedBy: "MarcoArelius",
+    postedDate: new Date("December 14, 2024 16:55:00"),
+    commentIDs: [commentRef12],
+    views: 21,
+    upvoters: ["Cat13"],
     downvoters: [],
   };
   let postRef1 = await createPost(post1);
   let postRef2 = await createPost(post2);
   let postRef3 = await createPost(post3);
+  let postRef4 = await createPost(post4);
+  let postRef5 = await createPost(post5);
 
   // Community objects
   const community1 = {
@@ -248,9 +329,19 @@ async function initializeDB() {
     members: ["BigFeet"],
     creator: "BigFeet",
   };
+  const community4 = {
+    // Community object 4
+    name: "Stony Brook University",
+    description: "A subreddit devoted to Stony Brook University students and alumni.",
+    postIDs: [postRef4, postRef5],
+    startDate: new Date("August 10, 2024 17:10:00"),
+    members: ["Rollo", "Shemp", "Cat13", "Astyanax", "RankOneTrucker", "BigFeet"],
+    creator: "Cat13",
+  };
   await createCommunity(community1);
   await createCommunity(community2);
   await createCommunity(community3);
+  await createCommunity(community4);
 
   // Generate password hash for all users except for command-line admin
   const salt = await bcrypt.genSalt(10);
