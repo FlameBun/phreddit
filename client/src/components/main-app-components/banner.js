@@ -37,7 +37,7 @@ export default function Banner({
    * phreddit logo on the banner.
    */
   function handlePhredditLogoClick() {
-    setView("welcome-page");
+    updateModelAndSetMainContent({view: "home-page", sort: "newest"});
   }
 
   /**
