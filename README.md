@@ -1,5 +1,10 @@
 # Phreddit
 The web application Phreddit is a full-stack Reddit clone incorporating several of Reddit's main features such as communities, posts, and comments.
+![home page](./images/home-page.png)
+![community page](./images/community-page.png)
+![post page](./images/post-page.png)
+![admin profile](./images/admin-profile.png)
+![user profile](./images/user-profile.png)
 
 ## How to Get Started
 1. Install Node.js and MongoDB if not done already.
