@@ -33,7 +33,7 @@ The web application Phreddit is a full-stack Reddit clone incorporating several 
 5. In the client directory, run `npm start`.
 
 ## Initialize the Database
-To initialize the underlying database of the Phreddit web application with the  provided sample data in initializeDB.js, in the server directory, run the following command:
+To initialize the underlying database of the Phreddit web application with the  provided sample data in initializeDB.js, in the `server` directory, run the following command:
 <pre>
 node initializeDB.js [email] [display name] [password]
 </pre>
