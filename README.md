@@ -1,10 +1,29 @@
 # Phreddit
-The web application Phreddit is a full-stack Reddit clone incorporating several of Reddit's main features such as communities, posts, and comments.
-![home page](./images/home-page.png)
-![community page](./images/community-page.png)
-![post page](./images/post-page.png)
-![admin profile](./images/admin-profile.png)
-![user profile](./images/user-profile.png)
+The web application Phreddit is a full-stack Reddit clone incorporating several of Reddit's main features. Users can create/join communities, post content, reply to posts and comment threads, and upvote/downvote. Through their user profiles, they can also edit or delete the communities, posts, and comments they have created.
+<div align="center">
+  <img src="./images/home-page.png" alt="home page" style="width: 90%; margin-left: auto; margin-right: auto;">
+  <div><em>Home Page</em></div>
+</div>
+<br>
+<div align="center">
+  <img src="./images/community-page.png" alt="community page" style="width: 90%; margin-left: auto; margin-right: auto;">
+  <div><em>Community Page</em></div>
+</div>
+<br>
+<div align="center">
+  <img src="./images/post-page.png" alt="post page" style="width: 90%; margin-left: auto; margin-right: auto;">
+  <div><em>Post Page</em></div>
+</div>
+<br>
+<div align="center">
+  <img src="./images/user-profile.png" alt="user profile" style="width: 90%; margin-left: auto; margin-right: auto;">
+  <div><em>User Profile</em></div>
+</div>
+<br>
+<div align="center">
+  <img src="./images/admin-profile.png" alt="admin profile" style="width: 90%; margin-left: auto; margin-right: auto;">
+  <div><em>Admin Profile</em></div>
+</div>
 
 ## How to Get Started
 1. Install Node.js and MongoDB if not done already.
@@ -34,4 +53,4 @@ Asta Moon | Astyanax | astamoon555@gmail.com
 </pre>
 The password for all of the listed accounts is `cse316`.
 
-Users can freely edit or delete their communities, posts, and comments. Admins can not only do the same, but they can also edit or delete other users' communities, posts, and comments, and they can also delete other users.
+Admins and non-admins can freely edit or delete their communities, posts, and comments. However, admins have special permissions to edit or delete other non-admins' communities, posts, and comments. Admins can even delete other non-admin accounts as well.
