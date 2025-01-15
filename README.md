@@ -54,3 +54,10 @@ Asta Moon | Astyanax | astamoon555@gmail.com
 The password for all of the listed accounts is `cse316`.
 
 Admins and non-admins can freely edit or delete their communities, posts, and comments. However, admins have special permissions to edit or delete other non-admins' communities, posts, and comments. Admins can even delete other non-admin accounts as well.
+
+## Contributors
+
+<ul>
+<li><a href="https://github.com/FlameBun">Justin Wu</a></li>
+<li><a href="https://github.com/AmandaW0143">Amanda Wang</a></li>
+</ul>
